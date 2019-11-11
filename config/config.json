@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "car-pooling-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/carPooling/CarPoolingWebPart.js",
+          "manifest": "./src/webparts/carPooling/CarPoolingWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CarPoolingWebPartStrings": "lib/webparts/carPooling/loc/{locale}.js"
+  }
+}

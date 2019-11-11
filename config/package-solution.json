@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "car-pooling-webpart-client-side-solution",
+    "id": "792af270-32bb-43d6-a72c-d5bb417020c4",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/car-pooling-webpart.sppkg"
+  }
+}
