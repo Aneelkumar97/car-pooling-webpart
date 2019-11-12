@@ -8,8 +8,8 @@ import {
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'CarPoolingWebPartStrings';
-import CarPooling from './components/CarPooling';
-import { ICarPoolingProps } from './components/ICarPoolingProps';
+import { sp, Web } from '@pnp/sp';
+import Main, { IMainProps } from './components/main';
 
 export interface ICarPoolingWebPartProps {
   description: string;
@@ -17,11 +17,18 @@ export interface ICarPoolingWebPartProps {
 
 export default class CarPoolingWebPart extends BaseClientSideWebPart<ICarPoolingWebPartProps> {
 
+  public onInit(): Promise<void> {
+    return super.onInit().then(_ => {
+      sp.setup({
+        spfxContext: this.context
+      });
+    });
+  }
+
   public render(): void {
-    const element: React.ReactElement<ICarPoolingProps > = React.createElement(
-      CarPooling,
+    const element: React.ReactElement<IMainProps> = React.createElement(
+      Main,
       {
-        description: this.properties.description
       }
     );
 

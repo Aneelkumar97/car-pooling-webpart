@@ -1,0 +1,39 @@
+.requestRideContainer {
+    .rides {
+        .ride.header {
+            background: #f2f2f2;
+
+            div:last-child:hover {
+                background: none;
+                color: #000;
+            }
+        }
+
+        .ride {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            div {
+                padding: 15px 5px;
+                width: 20%;
+            }
+
+            div:last-child {
+                border-radius: 26px;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            div:last-child:hover {
+                background: #c3c3;
+                color: #fff;
+            }
+        }
+
+        .ride:hover {
+            background: #c2c2c2;
+        }
+    }
+}
